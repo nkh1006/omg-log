@@ -12,7 +12,7 @@ const ContactCard: React.FC = () => {
   return (
     <>
       <StyledTitle>
-        <Emoji>💬</Emoji> 연락처
+        <Emoji>😊</Emoji> 연락처
       </StyledTitle>
       <StyledWrapper>
         <a href={`https://omf.org/kr/`} rel="noreferrer" target="_blank">
@@ -53,14 +53,15 @@ const StyledTitle = styled.div`
 `
 const StyledWrapper = styled.div`
   display: flex;
-  padding: 0.25rem;
+  padding: 0.5rem 0.25rem;
   flex-direction: column;
   border-radius: 1rem;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.05);
   background-color: ${({ theme }) =>
     theme.scheme === "light" ? "white" : theme.colors.gray4};
   a {
     display: flex;
-    padding: 0.75rem;
+    padding: 0.75rem 0.75rem;
     gap: 0.75rem;
     align-items: center;
     border-radius: 1rem;

@@ -80,6 +80,7 @@ const StyledWrapper = styled(Link)`
     transition-property: box-shadow;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 300ms;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.05);
 
     @media (min-width: 768px) {
       margin-bottom: 2rem;

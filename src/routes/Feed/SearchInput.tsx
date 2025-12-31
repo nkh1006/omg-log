@@ -33,13 +33,15 @@ const StyledWrapper = styled.div`
     margin-bottom: 0.75rem;
   }
   > .mid {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
     padding-left: 1.25rem;
     padding-right: 1.25rem;
     border-radius: 1rem;
     outline-style: none;
     width: 100%;
     background-color: ${({ theme }) => theme.colors.gray4};
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.05);
+    font-size: 1rem;
   }
 `

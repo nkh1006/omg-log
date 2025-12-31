@@ -70,6 +70,11 @@ const StyledWrapper = styled.div`
     margin-bottom: 1.5rem;
     gap: 0.25rem;
     overflow: scroll;
+    background-color: ${({ theme }) =>
+      theme.scheme === "light" ? "white" : theme.colors.gray4};
+    border-radius: 1rem;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.05);
+    padding: 0.5rem 0.25rem;
 
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -92,19 +97,20 @@ const StyledWrapper = styled.div`
       border-radius: 0.75rem;
       font-size: 0.875rem;
       line-height: 1.25rem;
-      color: ${({ theme }) => theme.colors.gray10};
+      color: ${({ theme }) => theme.colors.gray11};
       flex-shrink: 0;
       cursor: pointer;
 
       :hover {
-        background-color: ${({ theme }) => theme.colors.gray4};
+        background-color: ${({ theme }) => theme.colors.gray5};
+        color: ${({ theme }) => theme.colors.gray12};
       }
       &[data-active="true"] {
         color: ${({ theme }) => theme.colors.gray12};
-        background-color: ${({ theme }) => theme.colors.gray4};
+        background-color: ${({ theme }) => theme.colors.gray5};
 
         :hover {
-          background-color: ${({ theme }) => theme.colors.gray4};
+          background-color: ${({ theme }) => theme.colors.gray5};
         }
       }
     }
