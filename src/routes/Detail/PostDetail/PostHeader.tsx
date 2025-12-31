@@ -14,52 +14,54 @@ const PostHeader: React.FC<Props> = ({ data }) => {
   return (
     <StyledWrapper>
       <h1 className="title">{data.title}</h1>
-      {data.type[0] !== "Paper" && (
-        <nav>
-          <div className="top">
-            {data.author && data.author[0] && data.author[0].name && (
-              <>
-                <div className="author">
-                  <Image
-                    css={{ borderRadius: "50%" }}
-                    src={data.author[0].profile_photo || CONFIG.profile.image}
-                    alt="profile_photo"
-                    width={24}
-                    height={24}
-                  />
-                  <div className="">{data.author[0].name}</div>
+      {/*
+        {data.type[0] !== "Paper" && (
+          <nav>
+            <div className="top">
+              {data.author && data.author[0] && data.author[0].name && (
+                <>
+                  <div className="author">
+                    <Image
+                      css={{ borderRadius: "50%" }}
+                      src={data.author[0].profile_photo || CONFIG.profile.image}
+                      alt="profile_photo"
+                      width={24}
+                      height={24}
+                    />
+                    <div className="">{data.author[0].name}</div>
+                  </div>
+                  <div className="hr"></div>
+                </>
+              )}
+              <div className="date">
+                {formatDate(
+                  data?.date?.start_date || data.createdTime,
+                  CONFIG.lang
+                )}
+              </div>
+            </div>
+            <div className="mid">
+              {data.tags && (
+                <div className="tags">
+                  {data.tags.map((tag: string) => (
+                    <Tag key={tag}>{tag}</Tag>
+                  ))}
                 </div>
-                <div className="hr"></div>
-              </>
-            )}
-            <div className="date">
-              {formatDate(
-                data?.date?.start_date || data.createdTime,
-                CONFIG.lang
               )}
             </div>
-          </div>
-          <div className="mid">
-            {data.tags && (
-              <div className="tags">
-                {data.tags.map((tag: string) => (
-                  <Tag key={tag}>{tag}</Tag>
-                ))}
+            {data.thumbnail && (
+              <div className="thumbnail">
+                <Image
+                  src={data.thumbnail}
+                  css={{ objectFit: "cover" }}
+                  fill
+                  alt={data.title}
+                />
               </div>
             )}
-          </div>
-          {data.thumbnail && (
-            <div className="thumbnail">
-              <Image
-                src={data.thumbnail}
-                css={{ objectFit: "cover" }}
-                fill
-                alt={data.title}
-              />
-            </div>
-          )}
-        </nav>
-      )}
+          </nav>
+        )}
+      */}
     </StyledWrapper>
   )
 }
@@ -71,6 +73,8 @@ const StyledWrapper = styled.div`
     font-size: 1.875rem;
     line-height: 2.25rem;
     font-weight: 700;
+    margin-top: 1rem;
+    margin-bottom: 1.2rem;
   }
   nav {
     margin-top: 1.5rem;

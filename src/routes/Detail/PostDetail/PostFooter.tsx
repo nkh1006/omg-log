@@ -19,6 +19,7 @@ const Footer: React.FC<Props> = () => {
 export default Footer
 
 const StyledWrapper = styled.div`
+  margin-top: 12px;
   display: flex;
   justify-content: space-between;
   font-weight: 500;

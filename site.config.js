@@ -5,9 +5,7 @@ const CONFIG = {
     image: "/avatar.svg", // If you want to create your own notion avatar, check out https://notion-avatar.vercel.app
     role: "test developer",
     bio: "omg project homepage",
-    email: "",
-    linkedin: "",
-    github: "",
+    email: "omf",
     instagram: "",
   },
   projects: [
@@ -18,7 +16,7 @@ const CONFIG = {
   ],
   // blog setting (required)
   blog: {
-    title: "omg-log",
+    title: "😱 OMG 가이드북",
     description: "welcome to omg-log!",
     scheme: "system", // 'light' | 'dark' | 'system'
   },

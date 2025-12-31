@@ -32,10 +32,15 @@ const PostCard: React.FC<Props> = ({ data }) => {
             />
           </div>
         )}
-        <div data-thumb={!!data.thumbnail} data-category={!!category} className="content">
+        <div
+          data-thumb={!!data.thumbnail}
+          data-category={!!category}
+          className="content"
+        >
           <header className="top">
             <h2>{data.title}</h2>
           </header>
+          {/*
           <div className="date">
             <div className="content">
               {formatDate(
@@ -44,9 +49,12 @@ const PostCard: React.FC<Props> = ({ data }) => {
               )}
             </div>
           </div>
-          <div className="summary">
-            <p>{data.summary}</p>
-          </div>
+          */}
+          {data.summary && (
+            <div className="summary">
+              <p>{data.summary}</p>
+            </div>
+          )}
           <div className="tags">
             {data.tags &&
               data.tags.map((tag: string, idx: number) => (
@@ -126,6 +134,7 @@ const StyledWrapper = styled(Link)`
 
           @media (min-width: 768px) {
             font-size: 1.25rem;
+            margin: 0;
             line-height: 1.75rem;
           }
         }
@@ -145,8 +154,9 @@ const StyledWrapper = styled(Link)`
         }
       }
       > .summary {
-        margin-bottom: 1rem;
+        margin: 0;
         p {
+          margin: 0;
           display: none;
           line-height: 2rem;
           color: ${({ theme }) => theme.colors.gray11};
@@ -157,6 +167,7 @@ const StyledWrapper = styled(Link)`
         }
       }
       > .tags {
+        margin-top: 1rem;
         display: flex;
         gap: 0.5rem;
       }

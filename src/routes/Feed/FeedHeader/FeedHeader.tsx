@@ -10,7 +10,9 @@ const FeedHeader: React.FC<Props> = () => {
   return (
     <StyledWrapper>
       <CategorySelect />
+      {/*
       <OrderButtons />
+      */}
     </StyledWrapper>
   )
 }

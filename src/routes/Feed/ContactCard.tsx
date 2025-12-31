@@ -1,8 +1,7 @@
 import styled from "@emotion/styled"
 import React from "react"
 import {
-  AiFillLinkedin,
-  AiOutlineGithub,
+  AiOutlineHome,
   AiOutlineInstagram,
   AiOutlineMail,
 } from "react-icons/ai"
@@ -13,19 +12,13 @@ const ContactCard: React.FC = () => {
   return (
     <>
       <StyledTitle>
-        <Emoji>💬</Emoji> Contact
+        <Emoji>💬</Emoji> 연락처
       </StyledTitle>
       <StyledWrapper>
-        {CONFIG.profile.github && (
-          <a
-            href={`https://github.com/${CONFIG.profile.github}`}
-            rel="noreferrer"
-            target="_blank"
-          >
-            <AiOutlineGithub className="icon" />
-            <div className="name">github</div>
-          </a>
-        )}
+        <a href={`https://omf.org/kr/`} rel="noreferrer" target="_blank">
+          <AiOutlineHome className="icon" />
+          <div className="name">omf</div>
+        </a>
         {CONFIG.profile.instagram && (
           <a
             href={`https://www.instagram.com/${CONFIG.profile.instagram}`}
@@ -45,16 +38,6 @@ const ContactCard: React.FC = () => {
           >
             <AiOutlineMail className="icon" />
             <div className="name">email</div>
-          </a>
-        )}
-        {CONFIG.profile.linkedin && (
-          <a
-            href={`https://www.linkedin.com/in/${CONFIG.profile.linkedin}`}
-            rel="noreferrer"
-            target="_blank"
-          >
-            <AiFillLinkedin className="icon" />
-            <div className="name">linkedin</div>
           </a>
         )}
       </StyledWrapper>

@@ -79,7 +79,11 @@ const NotionRenderer: FC<Props> = ({ recordMap }) => {
 export default NotionRenderer
 
 const StyledWrapper = styled.div`
-  /* // TODO: why render? */
+  .notion {
+    font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont,
+      "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji",
+      Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+  }
   .notion-collection-page-properties {
     display: none !important;
   }
