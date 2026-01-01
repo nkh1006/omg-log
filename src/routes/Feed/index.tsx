@@ -31,7 +31,7 @@ const Feed: React.FC<Props> = () => {
         <ContactCard />
       </div>
       <div className="mid">
-        <MobileProfileCard />
+        {/* <MobileProfileCard /> */}
         <PinnedPosts q={q} />
         <SearchInput value={q} onChange={(e) => setQ(e.target.value)} />
         <div className="tags">
