@@ -16,7 +16,7 @@ const CONFIG = {
   ],
   // blog setting (required)
   blog: {
-    title: "😱 OMG 가이드북",
+    title: "OMG 가이드북",
     description:
       "이 작은 가이드북이 선교의 현장에서 누군가와 연결되는 첫 대화의 시작이 되기를 바랍니다.",
     scheme: "system", // 'light' | 'dark' | 'system'

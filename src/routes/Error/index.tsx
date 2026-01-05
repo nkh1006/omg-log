@@ -10,10 +10,10 @@ const CustomError: React.FC<Props> = () => {
       <div className="wrapper">
         <div className="top">
           <div>4</div>
-          <Emoji>🤔</Emoji>
+          <Emoji>😭</Emoji>
           <div>4</div>
         </div>
-        <div className="text">Post not found</div>
+        <div className="text">페이지를 찾을수 없습니다.</div>
       </div>
     </StyledWrapper>
   )
