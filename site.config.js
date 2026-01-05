@@ -17,12 +17,13 @@ const CONFIG = {
   // blog setting (required)
   blog: {
     title: "😱 OMG 가이드북",
-    description: "welcome to omg-log!",
+    description:
+      "이 작은 가이드북이 선교의 현장에서 누군가와 연결되는 첫 대화의 시작이 되기를 바랍니다.",
     scheme: "system", // 'light' | 'dark' | 'system'
   },
 
   // CONFIG configration (required)
-  link: "https://morethan-log.vercel.app",
+  link: "https://omg-log-7mqc.vercel.app",
   since: "", // If leave this empty, current year will be used.
   lang: "ko-KR", // ['en-US', 'zh-CN', 'zh-HK', 'zh-TW', 'ja-JP', 'es-ES', 'ko-KR']
   ogImageGenerateURL: "https://og-image-korean.vercel.app", // The link to generate OG image, don't end with a slash
@@ -52,7 +53,7 @@ const CONFIG = {
     },
   },
   utterances: {
-    enable: true,
+    enable: false,
     config: {
       repo: process.env.NEXT_PUBLIC_UTTERANCES_REPO || "",
       "issue-term": "og:title",
