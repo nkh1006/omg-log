@@ -17,11 +17,15 @@ export const getPosts = async () => {
 
   const response = await api.getPage(id)
   id = idToUuid(id)
-  const collection = Object.values(response.collection)[0]?.value
+  const collectionRaw = Object.values(response.collection)[0]?.value
+  const collection = collectionRaw?.value ?? collectionRaw
   const block = response.block
   const schema = collection?.schema
 
-  const rawMetadata = block[id].value
+  const getBlockValue = (blockId: string) =>
+    block[blockId]?.value?.value ?? block[blockId]?.value
+
+  const rawMetadata = getBlockValue(id)
 
   // Check Type
   if (
@@ -37,11 +41,12 @@ export const getPosts = async () => {
       const id = pageIds[i]
       const properties = (await getPageProperties(id, block, schema)) || null
       // Add fullwidth, createdtime to properties
+      const bv = getBlockValue(id)
       properties.createdTime = new Date(
-        block[id].value?.created_time
+        bv?.created_time
       ).toString()
       properties.fullWidth =
-        (block[id].value?.format as any)?.page_full_width ?? false
+        (bv?.format as any)?.page_full_width ?? false
 
       data.push(properties)
     }

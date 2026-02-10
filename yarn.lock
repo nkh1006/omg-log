@@ -211,7 +211,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/react@npm:^11.14.0":
+"@emotion/react@npm:^11.11.1":
   version: 11.14.0
   resolution: "@emotion/react@npm:11.14.0"
   dependencies:
@@ -252,7 +252,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/styled@npm:^11.14.1":
+"@emotion/styled@npm:^11.11.0":
   version: 11.14.1
   resolution: "@emotion/styled@npm:11.14.1"
   dependencies:
@@ -4272,8 +4272,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "morethan-log@workspace:."
   dependencies:
-    "@emotion/react": ^11.14.0
-    "@emotion/styled": ^11.14.1
+    "@emotion/react": ^11.11.1
+    "@emotion/styled": ^11.11.0
     "@radix-ui/colors": ^1.0.0
     "@tanstack/react-query": ^4.29.19
     "@types/gtag.js": ^0.0.12
