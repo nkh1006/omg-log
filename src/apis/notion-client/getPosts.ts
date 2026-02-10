@@ -17,13 +17,13 @@ export const getPosts = async () => {
 
   const response = await api.getPage(id)
   id = idToUuid(id)
-  const collectionRaw = Object.values(response.collection)[0]?.value
+  const collectionRaw = Object.values(response.collection)[0]?.value as any
   const collection = collectionRaw?.value ?? collectionRaw
   const block = response.block
   const schema = collection?.schema
 
   const getBlockValue = (blockId: string) =>
-    block[blockId]?.value?.value ?? block[blockId]?.value
+    (block[blockId]?.value as any)?.value ?? block[blockId]?.value
 
   const rawMetadata = getBlockValue(id)
 
