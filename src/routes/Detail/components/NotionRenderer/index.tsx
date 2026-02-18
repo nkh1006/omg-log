@@ -2,6 +2,7 @@ import dynamic from "next/dynamic"
 import Image from "next/image"
 import Link from "next/link"
 import { ExtendedRecordMap } from "notion-types"
+import { useMemo } from "react"
 import useScheme from "src/hooks/useScheme"
 
 // core styles shared by all of react-notion-x (required)
@@ -50,17 +51,58 @@ const mapPageUrl = (id: string) => {
   return "https://www.notion.so/" + id.replace(/-/g, "")
 }
 
+const AUDIO_EXTENSIONS = [".m4a", ".mp3", ".ogg", ".wav", ".flac", ".aac"]
+
+function isAudioUrl(url: string): boolean {
+  try {
+    const pathname = new URL(url).pathname.toLowerCase()
+    return AUDIO_EXTENSIONS.some((ext) => pathname.endsWith(ext))
+  } catch {
+    return AUDIO_EXTENSIONS.some((ext) => url.toLowerCase().includes(ext))
+  }
+}
+
+function convertAudioFileBlocks(
+  recordMap: ExtendedRecordMap
+): ExtendedRecordMap {
+  const blocks = { ...recordMap.block }
+  let modified = false
+
+  for (const blockId of Object.keys(blocks)) {
+    const entry = blocks[blockId]
+    if (!entry?.value || entry.value.type !== "file") continue
+
+    const source =
+      recordMap.signed_urls?.[blockId] ??
+      (entry.value.properties as any)?.source?.[0]?.[0]
+
+    if (source && isAudioUrl(source)) {
+      blocks[blockId] = {
+        ...entry,
+        value: { ...entry.value, type: "audio" as any },
+      }
+      modified = true
+    }
+  }
+
+  return modified ? { ...recordMap, block: blocks } : recordMap
+}
+
 type Props = {
   recordMap: ExtendedRecordMap
 }
 
 const NotionRenderer: FC<Props> = ({ recordMap }) => {
   const [scheme] = useScheme()
+  const processedRecordMap = useMemo(
+    () => convertAudioFileBlocks(recordMap),
+    [recordMap]
+  )
   return (
     <StyledWrapper>
       <_NotionRenderer
         darkMode={scheme === "dark"}
-        recordMap={recordMap}
+        recordMap={processedRecordMap}
         components={{
           Code,
           Collection,

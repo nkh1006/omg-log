@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://omg-log-7mqc.vercel.app
+
+# Sitemaps
+Sitemap: https://omg-log-7mqc.vercel.app/sitemap.xml

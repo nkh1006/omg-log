@@ -14,6 +14,36 @@ export const customMapImageUrl = (url: string, block: Block): string => {
     return url
   }
 
+  // Check if the file is an audio file (don't proxy through /image/)
+  const audioExtensions = ['.m4a', '.mp3', '.wav', '.flac', '.aac', '.ogg', '.wma']
+  const isAudioFile = audioExtensions.some(ext => url.toLowerCase().includes(ext))
+  
+  if (isAudioFile) {
+    // For audio files, process the URL but skip the /image/ proxy
+    try {
+      const u = new URL(url)
+
+      if (
+        u.pathname.startsWith('/secure.notion-static.com') &&
+        u.hostname.endsWith('.amazonaws.com')
+      ) {
+        if (
+          u.searchParams.has('X-Amz-Credential') &&
+          u.searchParams.has('X-Amz-Signature') &&
+          u.searchParams.has('X-Amz-Algorithm')
+        ) {
+          // if the URL is already signed, then use it as-is
+          return u.origin + u.pathname
+        }
+      }
+    } catch {
+      // ignore invalid urls
+    }
+    
+    // Return the audio file URL as-is
+    return url
+  }
+
   try {
     const u = new URL(url)
 
