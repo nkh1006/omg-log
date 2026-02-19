@@ -73,7 +73,6 @@ const StyledWrapper = styled(Link)`
   article {
     overflow: hidden;
     position: relative;
-    margin-bottom: 1.5rem;
     border-radius: 1rem;
     background-color: ${({ theme }) =>
       theme.scheme === "light" ? "white" : theme.colors.gray4};
@@ -81,10 +80,6 @@ const StyledWrapper = styled(Link)`
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 300ms;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.05);
-
-    @media (min-width: 768px) {
-      margin-bottom: 2rem;
-    }
 
     :hover {
       box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
@@ -134,7 +129,7 @@ const StyledWrapper = styled(Link)`
           cursor: pointer;
 
           @media (min-width: 768px) {
-            font-size: 1.25rem;
+            font-size: 1.05rem;
             margin: 0;
             line-height: 1.75rem;
           }
@@ -164,6 +159,7 @@ const StyledWrapper = styled(Link)`
 
           @media (min-width: 768px) {
             display: block;
+            font-size: 0.85em;
           }
         }
       }

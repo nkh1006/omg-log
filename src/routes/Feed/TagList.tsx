@@ -69,7 +69,7 @@ const StyledWrapper = styled.div`
     display: flex;
     margin-bottom: 1.5rem;
     gap: 0.25rem;
-    overflow: scroll;
+    overflow-x: auto;
     background-color: ${({ theme }) =>
       theme.scheme === "light" ? "white" : theme.colors.gray4};
     border-radius: 1rem;
@@ -81,10 +81,6 @@ const StyledWrapper = styled.div`
     ::-webkit-scrollbar {
       width: 0;
       height: 0;
-    }
-
-    @media (min-width: 1024px) {
-      display: block;
     }
 
     a {

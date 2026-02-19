@@ -73,6 +73,17 @@ export const Global = () => {
           margin: 0;
           border-top: 1px solid ${theme.colors.gray6};
         }
+
+        .my-2 {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 1rem;
+          margin: 0.5rem 0;
+
+          @media (max-width: 768px) {
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
       `}
     />
   )
