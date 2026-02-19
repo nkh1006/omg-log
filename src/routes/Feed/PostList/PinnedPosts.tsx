@@ -55,7 +55,7 @@ const StyledWrapper = styled.div`
     margin-bottom: 0.5rem;
     gap: 0.25rem;
     align-items: center;
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     line-height: 1.75rem;
     font-weight: 700;
     cursor: pointer;

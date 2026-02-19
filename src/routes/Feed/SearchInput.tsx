@@ -44,6 +44,6 @@ const StyledWrapper = styled.div`
     width: 100%;
     background-color: ${({ theme }) => theme.colors.gray4};
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.05);
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 `

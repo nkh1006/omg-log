@@ -18,7 +18,7 @@ const FeedHeader: React.FC<Props> = ({ onSearchToggle, isSearchOpen }) => {
           onClick={onSearchToggle}
           data-active={isSearchOpen}
         >
-          <Emoji>🔎</Emoji>
+          검색
         </button>
       </div>
     </StyledWrapper>
@@ -46,7 +46,7 @@ const StyledWrapper = styled.div`
       justify-content: center;
       padding: 0.4rem;
       border-radius: 0.5rem;
-      font-size: 1.25rem;
+      font-size: 0.9rem;
       color: ${({ theme }) => theme.colors.gray10};
       transition: background-color 0.15s, color 0.15s;
 

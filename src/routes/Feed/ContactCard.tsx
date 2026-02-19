@@ -11,12 +11,9 @@ import { Emoji } from "src/components/Emoji"
 const ContactCard: React.FC = () => {
   return (
     <>
-      <StyledTitle>
-        <Emoji>😊</Emoji> 연락처
-      </StyledTitle>
+      <StyledTitle>Contact</StyledTitle>
       <StyledWrapper>
         <a href={`https://omf.org/kr/`} rel="noreferrer" target="_blank">
-          <AiOutlineHome className="icon" />
           <div className="name">omf</div>
         </a>
         {CONFIG.profile.instagram && (
@@ -25,7 +22,6 @@ const ContactCard: React.FC = () => {
             rel="noreferrer"
             target="_blank"
           >
-            <AiOutlineInstagram className="icon" />
             <div className="name">instagram</div>
           </a>
         )}
@@ -36,7 +32,6 @@ const ContactCard: React.FC = () => {
             target="_blank"
             css={{ overflow: "hidden" }}
           >
-            <AiOutlineMail className="icon" />
             <div className="name">email</div>
           </a>
         )}
@@ -47,37 +42,25 @@ const ContactCard: React.FC = () => {
 
 export default ContactCard
 
-const StyledTitle = styled.div`
-  padding: 0.25rem;
-  margin-bottom: 0.75rem;
+const StyledTitle = styled.p`
+  margin: 0 0 4px;
+  font-size: 0.85rem;
 `
+
 const StyledWrapper = styled.div`
   display: flex;
-  padding: 0.5rem 0.25rem;
-  flex-direction: column;
-  border-radius: 1rem;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.05);
-  background-color: ${({ theme }) =>
-    theme.scheme === "light" ? "white" : theme.colors.gray4};
+  flex-direction: row;
+  gap: 0.75rem;
   a {
     display: flex;
-    padding: 0.75rem 0.75rem;
-    gap: 0.75rem;
-    align-items: center;
-    border-radius: 1rem;
     color: ${({ theme }) => theme.colors.gray11};
     cursor: pointer;
 
     :hover {
       color: ${({ theme }) => theme.colors.gray12};
-      background-color: ${({ theme }) => theme.colors.gray5};
-    }
-    .icon {
-      font-size: 1.5rem;
-      line-height: 2rem;
     }
     .name {
-      font-size: 0.875rem;
+      font-size: 0.825rem;
       line-height: 1.25rem;
     }
   }

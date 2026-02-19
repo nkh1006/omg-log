@@ -25,7 +25,7 @@ const StyledWrapper = styled.div`
     flex-direction: row;
     li {
       display: block;
-      margin-left: 1rem;
+      margin-left: 0rem;
       color: ${({ theme }) => theme.colors.gray11};
     }
   }

@@ -34,9 +34,6 @@ const TagList: React.FC<Props> = () => {
 
   return (
     <StyledWrapper>
-      <div className="top">
-        <Emoji>🏷️</Emoji>
-      </div>
       <div className="list">
         {Object.keys(data).map((key) => (
           <a
@@ -55,16 +52,6 @@ const TagList: React.FC<Props> = () => {
 export default TagList
 
 const StyledWrapper = styled.div`
-  .top {
-    display: none;
-    padding: 0.25rem;
-    margin-bottom: 0.75rem;
-
-    @media (min-width: 1024px) {
-      display: block;
-    }
-  }
-
   .list {
     display: flex;
     margin-bottom: 1.5rem;
@@ -74,7 +61,7 @@ const StyledWrapper = styled.div`
       theme.scheme === "light" ? "white" : theme.colors.gray4};
     border-radius: 1rem;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.05);
-    padding: 0.5rem 0.25rem;
+    padding: 0.25rem 0.5rem;
 
     scrollbar-width: none;
     -ms-overflow-style: none;

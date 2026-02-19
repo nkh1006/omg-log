@@ -40,6 +40,7 @@ const StyledWrapper = styled.div`
     align-items: center;
     width: 100%;
     max-width: 1120px;
+    font-size: 0.925rem;
     height: 3rem;
     margin: 0 auto;
     &[data-full-width="true"] {

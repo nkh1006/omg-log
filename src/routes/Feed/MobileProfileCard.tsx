@@ -57,7 +57,7 @@ const StyledWrapper = styled.div`
       > .wrapper {
         height: fit-content;
         > .top {
-          font-size: 1.25rem;
+          font-size: 1.1rem;
           line-height: 1.75rem;
           font-style: italic;
           font-weight: 700;
