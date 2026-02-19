@@ -135,4 +135,17 @@ const StyledWrapper = styled.div`
   .notion-list {
     width: 100%;
   }
+  .notion-quote,
+  .notion-text {
+    font-size: 0.9em;
+  }
+  .notion-hr {
+    border: 1px solid var(--fg-color-0);
+  }
+  .notion-h2 {
+    font-size: 1.25em;
+  }
+  .notion-h3 {
+    font-size: 1.05em;
+  }
 `
