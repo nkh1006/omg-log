@@ -107,6 +107,10 @@ const StyledWrapper = styled(Link)`
 
       &[data-thumb="false"] {
         padding-top: 3.5rem;
+
+        @media (max-width: 768px) {
+          padding-top: 3rem;
+        }
       }
       &[data-category="false"] {
         padding-top: 1.5rem;
@@ -121,8 +125,8 @@ const StyledWrapper = styled(Link)`
           align-items: baseline;
         }
         h2 {
-          margin-bottom: 0.5rem;
-          font-size: 1.125rem;
+          margin-bottom: 0rem;
+          font-size: 1.05rem;
           line-height: 1.75rem;
           font-weight: 500;
 
@@ -153,7 +157,7 @@ const StyledWrapper = styled(Link)`
         margin: 0;
         p {
           margin: 0;
-          display: none;
+          font-size: 0.85em;
           line-height: 2rem;
           color: ${({ theme }) => theme.colors.gray11};
 
@@ -167,6 +171,11 @@ const StyledWrapper = styled(Link)`
         margin-top: 1rem;
         display: flex;
         gap: 0.5rem;
+
+        @media (max-width: 768px) {
+          margin-top: 0.5rem;
+          gap: 0.3rem;
+        }
       }
     }
   }

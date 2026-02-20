@@ -50,6 +50,10 @@ const StyledWrapper = styled.div`
       color: ${({ theme }) => theme.colors.gray10};
       transition: background-color 0.15s, color 0.15s;
 
+      @media (max-width: 768px) {
+        font-size: 0.8rem;
+      }
+
       :hover {
         background-color: ${({ theme }) => theme.colors.gray4};
         color: ${({ theme }) => theme.colors.gray12};

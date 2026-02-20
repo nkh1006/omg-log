@@ -80,8 +80,12 @@ export const Global = () => {
           gap: 1rem;
           margin: 0.5rem 0;
 
-          @media (max-width: 768px) {
+          @media (min-width: 769px) and (max-width: 1180px) {
             grid-template-columns: repeat(2, 1fr);
+          }
+
+          @media (max-width: 768px) {
+            grid-template-columns: repeat(1, 1fr);
           }
         }
       `}

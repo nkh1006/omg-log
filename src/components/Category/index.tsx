@@ -55,4 +55,9 @@ const StyledWrapper = styled.div`
   line-height: 1.1rem;
   opacity: 0.9;
   color: ${colors.dark.gray1};
+
+  @media (max-width: 768px) {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.4rem;
+  }
 `

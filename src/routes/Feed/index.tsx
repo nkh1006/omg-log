@@ -45,7 +45,7 @@ const StyledWrapper = styled.div`
   padding: 2rem 0;
 
   @media (max-width: 768px) {
-    padding: 0.5rem 0;
+    padding: 1.2rem 0 0.5rem;
   }
 
   > .mid {
@@ -63,7 +63,7 @@ const StyledWrapper = styled.div`
     z-index: 100;
     width: 160px;
 
-    @media (max-width: 768px) {
+    @media (max-width: 1320px) {
       display: none;
     }
   }

@@ -45,5 +45,10 @@ const StyledWrapper = styled.div`
     background-color: ${({ theme }) => theme.colors.gray4};
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.05);
     font-size: 0.9rem;
+
+    @media (max-width: 768px) {
+      font-size: 0.8rem;
+      padding: 0.5rem 1rem;
+    }
   }
 `
