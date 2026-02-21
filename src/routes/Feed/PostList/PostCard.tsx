@@ -127,7 +127,7 @@ const StyledWrapper = styled(Link)`
         h2 {
           margin-bottom: 0rem;
           font-size: 1.05rem;
-          line-height: 1.75rem;
+          line-height: 1.5rem;
           font-weight: 500;
 
           cursor: pointer;
@@ -135,7 +135,7 @@ const StyledWrapper = styled(Link)`
           @media (min-width: 768px) {
             font-size: 1.05rem;
             margin: 0;
-            line-height: 1.75rem;
+            line-height: 1.5rem;
           }
         }
       }
@@ -156,9 +156,9 @@ const StyledWrapper = styled(Link)`
       > .summary {
         margin: 0;
         p {
-          margin: 0;
+          margin: 8px 0 0 0;
           font-size: 0.85em;
-          line-height: 2rem;
+          line-height: 1.25rem;
           color: ${({ theme }) => theme.colors.gray11};
 
           @media (min-width: 768px) {

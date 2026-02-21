@@ -58,7 +58,7 @@ const StyledWrapper = styled.div`
 
   > .contact-fixed {
     position: fixed;
-    bottom: 2rem;
+    bottom: 1.5rem;
     left: 1.5rem;
     z-index: 100;
     width: 160px;
