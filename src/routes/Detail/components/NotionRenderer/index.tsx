@@ -135,6 +135,7 @@ const StyledWrapper = styled.div`
   .notion-list {
     width: 100%;
   }
+  .notion-list li,
   .notion-quote,
   .notion-text {
     font-size: 0.9em;
@@ -143,9 +144,12 @@ const StyledWrapper = styled.div`
     border: 1px solid var(--fg-color-0);
   }
   .notion-h2 {
-    font-size: 1.25em;
+    font-size: 1.15em;
   }
   .notion-h3 {
-    font-size: 1.05em;
+    font-size: 1.02em;
+  }
+  .notion-list li {
+    padding: 1.25px 0;
   }
 `
