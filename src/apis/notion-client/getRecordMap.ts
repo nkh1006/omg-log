@@ -14,7 +14,8 @@ async function addSignedUrlsForAttachments(
     const block = entry?.value
     if (!block) continue
 
-    const isFileOrAudio = block.type === "file" || block.type === "audio"
+    const isFileOrAudio =
+      block.type === "file" || block.type === "audio" || block.type === "pdf"
     if (!isFileOrAudio) continue
 
     // Skip if signed URL already present

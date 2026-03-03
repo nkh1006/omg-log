@@ -152,4 +152,7 @@ const StyledWrapper = styled.div`
   .notion-list li {
     padding: 1.25px 0;
   }
+  .notion-asset-wrapper {
+    max-width: 100%;
+  }
 `
